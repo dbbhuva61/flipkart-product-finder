@@ -43,8 +43,6 @@ public class FatchController {
 			Map<String, Object> b3 = new HashMap();
 			b1.put("requestContext", b3);
 			b3.put("type", "BROWSE_PAGE");
-			b3.put("ssid", "xi7y5nrfkg0000001652850894171");
-			b3.put("sqid", "k5512h0ycg0000001652851341777");
 
 			HttpEntity<Object> request = new HttpEntity<Object>(b1, headers);
 

@@ -33,7 +33,7 @@ public class FatchController {
 		while (true) {
 			Map<String, Object> b1 = new HashMap();
 			b1.put("pageUri",
-					"/search?q=saree&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off");
+					"/search?q=sarees&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off");
 			Map<String, Object> b2 = new HashMap();
 			b1.put("pageContext", b2);
 			b2.put("fetchSeoData", "true");
@@ -49,7 +49,7 @@ public class FatchController {
 			try {
 				ResponseEntity<Map> response = restTemplate.postForEntity(url, request, Map.class);
 				Map<String, Object> m_body = response.getBody();
-
+			
 				Map<String, Object> m_response = (Map<String, Object>) m_body.get("RESPONSE");
 
 				List<Object> m_slots = (List<Object>) m_response.get("slots");
@@ -57,7 +57,6 @@ public class FatchController {
 				for (int i = 0; i < m_slots.size(); i++) {
 
 					Map<String, Object> m_allslots = (Map<String, Object>) m_slots.get(i);
-					// System.out.println(allslots);
 					
 					String wid = "WIDGET";
 					Object stype = m_allslots.get("slotType");
@@ -83,9 +82,8 @@ public class FatchController {
 								Map<String, Object> m_value = (Map<String, Object>) m_proInfo.get("value");
 
 								Object brand = m_value.get("productBrand");
-								//System.out.println(brand);
 
-/* product brand name  ---> */	String searchBrand = "Rudra Fashion";
+/* product brand name  ---> */	String searchBrand = "yashika";
 
 								if (brand.equals(searchBrand)) {
 
@@ -105,45 +103,4 @@ public class FatchController {
 		}
 	}
 
-//				ResponseEntity<String> response = restTemplate.postForEntity(url, request, String.class);
-//				String b = response.getBody();
-//				String c = b;
-
-	// System.out.println(c);
-
-//				final Pattern pattern = Pattern.compile("\"productBrand\":\"PaLkAaNo\"", Pattern.CASE_INSENSITIVE);
-//				// Match regex agains t input  
-//				final Matcher matcher = pattern.matcher(c);
-//
-//				if (matcher.find()) {
-//					System.out.println(b);
-//					System.out.println("Found: ");
-//					System.out.println("Page No: " + a);
-//
-//					break;
-//
-//				} else {
-//					a++;
-//					System.out.println("Page No: " + a);
-//				}
-
-//		return true;
-
-	public static void main(String[] args) {
-//		String test = "           \"showDiscountAsAmount\": false,\r\n"
-//				+ "                                            \"title\": null,\r\n"
-//				+ "                                            \"totalDiscount\": 76\r\n"
-//				+ "                                        },\r\n"
-//				+ "                                        \"productBrand\":\"PaLkAaNo\",\r\n"
-//				+ "                                        \"productCardTagDetails\": [],\r\n"
-//				+ "                                        \"rating\": {";
-//
-//		String p = "\"productBrand\":\"PaLkAaNo\"";
-//
-//		if (test.matches("productBrand...PaLkAaNo")) {
-//			System.out.println("yes");  
-//		} else {
-//			System.out.println("no");
-//		}
-	}
 }

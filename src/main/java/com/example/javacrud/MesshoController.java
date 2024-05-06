@@ -67,7 +67,6 @@ public class MesshoController {
 
 						System.out.println("found : "+name);
 						System.out.println("Page No: "+a);
-						//break out;
 						return true;
 					}	
 				}
@@ -80,26 +79,5 @@ public class MesshoController {
 		catch (Exception e) { }	
 	}
 }
-	
-	public static void main(String[] args) {
-		
-//		String test = " {\r\n" + "            \"id\": 1600430,\r\n"
-//				+ "            \"name\": \"Kashvi Voguish Sarees\",\r\n" + "            \"category_id\": 1004,\r\n"
-//				+ "            \"sub_sub_category_name\": \"Sarees\",\r\n"
-//				+ "            \"min_catalog_price\": 488,\r\n" + "            \"min_product_price\": 488,\r\n"
-//				+ "            \"transient_price\": 438,\r\n" + "            \"max_product_discount\": 10,\r\n"
-//				+ "            \"original_price\": 488,\r\n ";
-//
-//		String p = "\"name\":\"Kashvi Voguish Sarees\"";
-//
-//		test = test.toLowerCase();
-//		if (test.matches("name...Kashvi Voguish Sarees")) {
-//			System.out.println("yes");
-//		} else {
-//			System.out.println("no");
-//		}
-//
-//		}
-	}
-	
+
 }
